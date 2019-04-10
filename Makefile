@@ -3,10 +3,10 @@
 # ASSISTANCE FROM ANY PERSON OTHER THAN THE INSTRUCTOR OF THIS COURSE
 # OR ONE OF OUR UNDERGRADUATE GRADERS. 
 
-all:lab6
+all:SimpleData
 
-lab6:lab6main.o lab6assem.o
-	gcc lab6main.o lab6assem.o -o lab6
+SimpleData:lab6main.o lab6assem.o
+	gcc lab6main.o lab6assem.o -o SimpleData
 
 lab6main.o:lab6main.c
 	gcc -g -ansi -pedantic -c lab6main.c
@@ -15,5 +15,5 @@ lab6assem.o:lab6assem.s
 	gcc -g -lc -m64 -c lab6assem.s
 
 clean:
-	rm -rf *.o lab6
+	rm -rf *.o SimpleData
 
