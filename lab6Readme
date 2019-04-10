@@ -1,0 +1,27 @@
+
+# BY SUBMITTING THIS FILE AS PART OF MY LAB ASSIGNMENT, I CERTIFY THAT
+# ALL OF THE CONTENT OF THIS FILE WAS CREATED BY ME WITH NO
+# ASSISTANCE FROM ANY PERSON OTHER THAN THE INSTRUCTOR OF THIS COURSE
+# OR ONE OF OUR UNDERGRADUATE GRADERS. 
+
+Weizi Cai
+
+10 hours
+
+∙ Short description of any concerns, interesting problems or discoveries encountered, or
+comments in general about the contents of the lab 
+--a concern of mine is about the appropriate way to access memories in array with leaq. AT first it was easy, but it becomes a more complicated problem when it is a array of dword (4 bytes) instead of 8 bytes variable array. This requires me to have a deeper understand when using leaq	(%rdi, %r10, 4), %r9
+In overall I think this lab is not that hard as lab4, however I think there should be more practice on DIY of assembly language before we got to this lab.
+
+∙ Describe how you used gdb to find a bug in C language program you were given while
+debugging it. Include how you set breakpoints, variables you printed out, what values
+they had, what you found that enabled you to fix the bug. 
+--this time, the sentence "tui reg general" helped me a lot when I wrote my codes. It allows me to have a clear pictures on what have been changed. I prefer this rather than regular c code debugging.I set break point at break 36 this time, because this is where we start to call function Min. I didnt printed out any variables, instead, I observe them by just looking at the registers.
+PS: later I found the way to print! to print all you need to do it "x/d 0xaddress" then you can get decimal value of that address^^
+
+∙ Describe how you used gdb to find a bug in one of your x86-64 programs. 
+I used GDB to found the bug of leaq	(%rdi, %r10, 4), %r9, at first, I wrote leaq	(%rdi, %r10, 8), %r9, as a result, when I used tui reg general tool to observe, I found there was no value in r9 untill it reached the half way thought all loops. So I got the conclusion that I need to change the size of each inscrease.
+
+∙ Did you have to jump between your C language/x86-64 language programs to fix any
+bugs? 
+Just a little bit. Because I was pretty sure what is in the dynamic array, the only time I went back and check lab6main, was to check what value I got as second parameter so that I can set up loops in function. (which is exactly the number of ints in array)
