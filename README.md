@@ -14,7 +14,7 @@ make
 
 2. then, in the command window, type in:
 
-calc_values 14 15 81 90 100 -11 -1000 3000 20
+SimpleData 14 15 81 90 100 -11 -1000 3000 20
 
 
 
